@@ -1,1 +1,121 @@
-Hello
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive News Page</title>
+    <style>
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Main content container */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Article content */
+        .article {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .article h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .article p {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+
+        /* Recommended posts section */
+        .recommended {
+            margin: 40px 0;
+        }
+
+        .recommended h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .posts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 0 20px;
+        }
+
+        .post-card {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .post-card img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .post-card h3 {
+            font-size: 1.1em;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            .article h1 {
+                font-size: 2em;
+            }
+
+            .posts-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Main article -->
+        <article class="article">
+            <h1>Main Article Title</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+        </article>
+
+        <!-- Recommended posts -->
+        <section class="recommended">
+            <h2>Recommended Posts</h2>
+            <div class="posts-grid">
+                <div class="post-card">
+                    <img src="https://via.placeholder.com/200x150" alt="Post 1">
+                    <h3>Recommended Post Title 1</h3>
+                </div>
+                <div class="post-card">
+                    <img src="https://via.placeholder.com/200x150" alt="Post 2">
+                    <h3>Recommended Post Title 2</h3>
+                </div>
+                <div class="post-card">
+                    <img src="https://via.placeholder.com/200x150" alt="Post 3">
+                    <h3>Recommended Post Title 3</h3>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
