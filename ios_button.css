@@ -1,7 +1,7 @@
 .ios-button {
     /* Basic layout and sizing */
-    padding: 12px 24px;
-    font-size: 16px;
+    padding: 0.8rem 1.5rem; /* Increased padding using rem */
+    font-size: 1.1rem; /* Slightly larger text */
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     
     /* Visual styling */
@@ -17,9 +17,16 @@
     /* Remove default button styles */
     outline: none;
     -webkit-appearance: none;
+    
+    /* Ensure minimum touch target size for mobile */
+    min-width: 120px;
+    min-height: 44px; /* Apple's minimum recommended touch target size */
+    
+    /* Better spacing */
+    margin: 0.5rem;
 }
 
-/* Hover effect */
+/* Hover effect (won't apply on mobile) */
 .ios-button:hover {
     background-color: #0062CC;
 }
@@ -35,4 +42,14 @@
     background-color: #E0E0E0;
     color: #8E8E93;
     cursor: not-allowed;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .ios-button {
+        padding: 1rem 2rem; /* Even larger on small screens */
+        font-size: 1.2rem;
+        min-width: 140px;
+        min-height: 48px;
+    }
 }
