@@ -1,0 +1,72 @@
+/* Reset default margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Center the textbox on the page */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f4f8; /* Light background similar to the image */
+    font-family: Arial, sans-serif;
+}
+
+/* Style the textbox container */
+.textbox {
+    background-color: #ffffff; /* White background */
+    border-radius: 10px; /* Rounded corners */
+    padding: 15px 30px; /* Padding around the input */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%; /* Default width */
+    max-width: 300px; /* Maximum width for larger screens */
+    min-width: 200px; /* Minimum width for smaller screens */
+    transition: all 0.3s ease; /* Smooth transition for responsiveness */
+}
+
+/* Style the input inside the textbox */
+.textbox input {
+    border: none; /* Remove default input border */
+    outline: none; /* Remove default outline on focus */
+    background: transparent; /* Transparent background to blend with the container */
+    font-size: 1.5rem; /* Default font size */
+    color: #2c3e50; /* Dark color for the text */
+    font-weight: 500; /* Medium font weight */
+    width: 100%; /* Take full width of the container */
+    text-align: center; /* Center the text */
+}
+
+/* Placeholder text styling */
+.textbox input::placeholder {
+    color: #95a5a6; /* Light gray for placeholder */
+    font-weight: 400; /* Lighter font weight for placeholder */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .textbox {
+        padding: 10px 20px; /* Slightly less padding on smaller screens */
+        max-width: 250px; /* Adjust max-width for tablets */
+    }
+
+    .textbox input {
+        font-size: 1.2rem; /* Smaller font size for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .textbox {
+        padding: 8px 15px; /* Even less padding on mobile */
+        max-width: 200px; /* Adjust max-width for mobile */
+    }
+
+    .textbox input {
+        font-size: 1rem; /* Smaller font size for mobile */
+    }
+}
