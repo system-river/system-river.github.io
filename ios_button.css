@@ -1,0 +1,38 @@
+.ios-button {
+    /* Basic layout and sizing */
+    padding: 12px 24px;
+    font-size: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    
+    /* Visual styling */
+    background-color: #007AFF; /* iOS blue */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    
+    /* Interactivity */
+    cursor: pointer;
+    transition: all 0.2s ease;
+    
+    /* Remove default button styles */
+    outline: none;
+    -webkit-appearance: none;
+}
+
+/* Hover effect */
+.ios-button:hover {
+    background-color: #0062CC;
+}
+
+/* Active/Pressed effect */
+.ios-button:active {
+    background-color: #0051A8;
+    transform: scale(0.98);
+}
+
+/* Disabled state */
+.ios-button:disabled {
+    background-color: #E0E0E0;
+    color: #8E8E93;
+    cursor: not-allowed;
+}
